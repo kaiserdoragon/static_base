@@ -10,13 +10,11 @@ html {
 }
 
 body {
-  
   font-family: $font-sans;
   font-size: var(--fz16);
   font-weight: 400; // ※游ゴシックのときは500
   line-height: 1.6;
   color: $color-body;
-  position: relative;
 }
 
 // font-sizeは下記の用に指定
