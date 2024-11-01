@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <title>★タイトル｜サイト名★</title>
+  <meta content="★サイトの説明文★" name="description">
+  <link rel="stylesheet" href="/wp-content/themes/theme/css/reset.min.css">
+  <link rel="stylesheet" href="/wp-content/themes/theme/css/style.min.css">
+  <!-- safariのスムーススクロール対応用 -->
+  <script src=" https://polyfill.io/v3/polyfill.min.js?features=smoothscroll"></script>
+  <!-- jQuery(WPではheader記載不要) -->
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+  <style>
+    h2.parts {
+      font-weight: bold;
+      font-size: 1.5em;
+      margin: 30px 0;
+      display: flex;
+      column-gap: 10px;
+      align-items: center;
+    }
+
+    h2.parts::after {
+      content: "";
+      height: 1px;
+      border-bottom: 1px dashed #000;
+      flex: 1;
+    }
+
+    h3.parts {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin: 30px 0;
+      padding-bottom: 5px;
+      border-bottom: 1px dashed #000;
+    }
+
+    table.parts {
+      width: auto;
+    }
+
+    table.parts th {
+      text-align: left;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    table.parts th,
+    table.parts td {
+      padding: 5px 20px;
+      border-bottom: 1px solid #000;
+      border-top: 1px solid #000;
+    }
+
+    table.parts small {
+      font-size: 0.9em;
+      color: coral;
+    }
+
+    ul.parts {
+      margin: 20px 0;
+      list-style-type: disc;
+      padding-left: 2em;
+    }
+
+    details.parts>summary,
+    details.parts>div {
+      padding: 10px;
+    }
+
+    details.parts>summary {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    details.parts>div {
+      padding-left: 2em;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="header">
+      <div class="container">
+        <p class="header--logo">
+          <a href="/"><img src="img/common/logo.svg" alt="LOGOTYPE" width="250" height="43"></a>
+        </p>
+        <button id="js-gnav_btn" class="gnav_btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="js-gnav" class="gnav">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#">Message</a></li>
+            <li><a href="#">Case</a></li>
+            <li><a href="#">Vision</a></li>
+            <li><a href="#">Work-shop</a></li>
+            <li><a href="#">Voice</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <p class="u-txt_center">↑必ずz-indexをつける</p>
+    <div class="eyecatch">
+      <img src="https://placehold.jp/2000x300.png" alt="" width="2000" height="300">
+    </div>
+    <main>
+      <section class="u-mb50">
+        <div class="container">
+          <h2 class="parts">フォント</h2>
+          <table class="parts">
+            <tr>
+              <th>mac：ヒラギノ角ゴシック<br>windows：メイリオ</th>
+              <td>$font-sans</td>
+            </tr>
+            <tr>
+              <th>mac：ヒラギノ明朝<br>windows：游明朝</th>
+              <td>$font-serif</td>
+            </tr>
+          </table>
+          <ul class="parts">
+            <li>font-size : 16px;</li>
+            <li>font-weight : 400;</li>
+            <li>line-height: 1.6;</li>
+            <li>letter-spacing: 0;</li>
+            <li>何らかの注意書き</li>
+          </ul>
+          <details class="parts">
+            <summary>font-familyコピペ用</summary>
+            <div>
+              <table class="parts">
+                <tr>
+                  <th>游ゴシック</th>
+                  <td>
+                    $font-yugo: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", sans-serif;
+                    <p><small>游ゴシックはwindowsで擦れるのでfont-weight: 500;以下にしないこと</small></p>
+                    <p><small>※游ゴシックmediumを指定する方法もありますが、boldにすると滲みます。</small></p>
+                  </td>
+                </tr>
+                <tr>
+                  <th>游明朝</th>
+                  <td>$font-yumin: "YuMincho", "Yu Mincho", "游明朝体", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro",
+                    "MS P明朝", "MS PMincho", "Times New Roman", serif;
+                  </td>
+                </tr>
+                <tr>
+                  <th>ヒラギノ角ゴ</th>
+                  <td>$font-hiragino: "Hiragino Sans", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", sans-serif;
+                    <p><small>※windowsにヒラギノフォントはありません。メイリオかNoto Sansにします。</small></p>
+                  </td>
+                </tr>
+                <tr>
+                  <th>ヒラギノ明朝</th>
+                  <td>$font-hiraginomin: "Hiragino Mincho Pro", "ヒラギノ明朝 Pro", "MS P明朝", "MS PMincho", "Times New Roman", serif;
+                    <p><small>※windowsにヒラギノフォントはありません。MS明朝かNoto Serifにします。</small></p>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Noto Sans</th>
+                  <td>$font-noto: "Noto Sans JP", $font-serif;</td>
+                </tr>
+                <tr>
+                  <th>Noto Serif</th>
+                  <td>$font-notomin: "Noto Serif JP", $font-sans;</td>
+                </tr>
+                <tr>
+                  <th>欧文(ゴシック)</th>
+                  <td>$font-gothic: "Helvetica Neue",Helvetica,Arial,sans-serif;</td>
+                </tr>
+                <tr>
+                  <th>欧文(明朝)</th>
+                  <td>$font-mincho: "Times New Roman",serif;</td>
+                </tr>
+              </table>
+              <p><small>代替フォントはbaseのものを使用し、できるだけserif,sans-serifのみの指定はしない</small></p>
+              <p><small>webフォントはvariables.cssに読み込むとわかりやすい</small></p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="u-mb50">
+        <div class="container">
+          <h2 class="parts">container</h2>
+          <table class="parts">
+            <tr>
+              <th>container</th>
+              <td>1200px + 50px</td>
+            </tr>
+            <tr>
+              <th>container -md</th>
+              <td>1080px + 50px</td>
+            </tr>
+            <tr>
+              <th>container -sm</th>
+              <td>1000px + 50px</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <section class="u-mb50">
+        <div class="container">
+          <h2 class="parts">ボタン</h2>
+        </div>
+      </section>
+      <section class="u-mb50">
+        <div class="container">
+          <h2 class="parts">タイトル</h2>
+        </div>
+      </section>
+
+      <section class="u-mb50">
+        <div class="container">
+          <h2 class="parts">グーグルマップ</h2>
+          <p>googlemapで施設を表示して「共有」> 「地図を埋め込む」からiframeをコピーしてください。<br>※iframeのheight属性とwidth属性を削除してください</p>
+          <div class="googlemap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13048.147040546424!2d136.90107923931538!3d35.155703961209205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600370db4fc25cc3%3A0x15e79e9ce3dc5ef9!2z5qCq5byP5Lya56S-44Ki44Or44K_!5e0!3m2!1sja!2sjp!4v1670550078208!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="u-mb50">
+        <div class="container">
+          <h2 class="parts">テーブル</h2>
+          <p>tableクラスを付けると、767px以下になったときに表が縦積みになります。</p>
+          <table class="table">
+            <tr>
+              <th>果物</th>
+              <th>味</th>
+            </tr>
+            <tr>
+              <td>イチゴ</td>
+              <td>甘い</td>
+            </tr>
+            <tr>
+              <td>レモン</td>
+              <td>酸っぱい</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <section class="u-mb50">
+        <div class="container">
+          <h2 class="parts">パンくずリスト</h2>
+          <ol class="breadcrumbs">
+            <li><a href="#">トップ</a></li>
+            <li>ページ名</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="u-mb50">
+        <div class="container">
+          <h2 class="parts">ページネーション</h2>
+          <ol class="pagination">
+            <li class="is-current"><span>1</span></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="u-mb50">
+        <div class="container">
+          <h2 class="parts">タブ切り替え</h2>
+          <nav class="tab_select--nav">
+            <button class="is-active">項目１</button>
+            <button>項目２</button>
+            <button>項目３</button>
+          </nav>
+          <div class="tab_select--tab_wrap">
+            <div class="tab_select--tab is-show"><img src="https://placehold.jp/400x300.png" alt=""></div>
+            <div class="tab_select--tab"><img src="https://placehold.jp/400x200.png" alt=""></div>
+            <div class="tab_select--tab"><img src="https://placehold.jp/700x300.png" alt=""></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="u-mb50">
+        <div class="container">
+          <h2 class="parts">その他の用意されているクラス</h2>
+          <ul>
+            <li>.totop(上部に戻るボタン)</li>
+            <li>.is-hidden_pc(PC表示ではhidden)</li>
+            <li>.is-hidden_sp(SP表示ではhidden)</li>
+            <li>.u-txt_○○(text-align: ○○;)</li>
+            <li>.u-mb50(5刻みで5~50まで指定可能)</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="u-mb50">
+        <div class="container">
+          <h2 class="parts">SCSSについて</h2>
+          <h3 class="parts">メディアクエリ</h3>
+          <ul>
+            <li>@include max-mq() {} : SP表示のみ適用</li>
+            <li>@include min-mq() {} : PC表示のみ適用</li>
+          </ul>
+          <h3 class="parts">フォントサイズ</h3>
+          <p>font-size: var(--fz16);<br>「--fz10 ~ --fz80」まで使えます。</p>
+        </div>
+      </section>
+
+      <div class="totop">toTop</div>
+    </main>
+    <footer class="footer">
+      <p class="footer--copy"><small>(C)2018 ALTA CO.,LTD.</small></p>
+      <p class="footer--copy"><small>&copy; 2018 ALTA CO.,LTD.</small></p>
+    </footer>
+  </div>
+  <script src="/wp-content/themes/theme/js/scripts.min.js" defer></script>
+</body>
+
+</html>
